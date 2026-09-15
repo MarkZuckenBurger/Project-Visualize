@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Normal bubble sort it looks through the array again and again to compare neighbour elements and swaps them if they
  * are in the wrong place.Simple enough to understand but important note: it can be very inefficient due to run time
- * increasing as the input increases 0(n^2).
+ * increasing as the input increases 0(n^2)..
  */
 
 
