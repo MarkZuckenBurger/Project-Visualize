@@ -37,16 +37,18 @@ public class BubbleSort implements SortAlgorithm {
             //each pass due to last i elements already in place and not needing to be rechecked.
             for (int j = 0; j < array.size() - i - 1; j++)
             {
+                //Record the two positions being compared
                 steps.add(new SortStep(new ArrayList<>(array), j, j + 1, StepType.COMPARE));
 
 
                 if (array.get(j) > array.get(j + 1))
                 {
+                    //Swap the Elements as they are not in order.
                     int temp = array.get(j);
                     array.set(j, array.get(j + 1));
                     array.set(j + 1, temp);
 
-
+                    //Record the swap with arrays new state at this point
                     steps.add(new SortStep(new ArrayList<>(array), j, j + 1, StepType.SWAP));
                 }
             }
